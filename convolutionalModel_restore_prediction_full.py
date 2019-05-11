@@ -225,7 +225,7 @@ def model_predict(data_test, y_label, learning_rate = 0.009, num_epochs = 100, m
     # Iniciar la sesión 
     with tf.Session() as sess: #
         
-        saver.restore(sess, "C:\\Users\\itmfr\\Desktop\\COV\\Nueva carpeta\\RedesConvolucionales_Clase1_empty\\red_conHArold\\convolution.ckpt")        
+        saver.restore(sess, "C/home/santiagovf/Documents/Git/convolution.ckpt")        
         print("Model restored.")        
                
         predict_op = tf.nn.softmax(Z6)  # Apply softmax to logits
@@ -239,7 +239,7 @@ def model_predict(data_test, y_label, learning_rate = 0.009, num_epochs = 100, m
         return prediccion
     
     
-img = cv2.imread("C:\\Users\\itmfr\\Desktop\\COV\\Nueva carpeta\\RedesConvolucionales_Clase1_empty\\figura2.png")
+img = cv2.imread("/home/santiagovf/Documents/Git/figura2.png")
 img = cv2.resize(img, (64, 64), interpolation=cv2.INTER_CUBIC)#
 img_test = img/255.
 img_test=img_test[np.newaxis,...]

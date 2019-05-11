@@ -380,7 +380,7 @@ def model(X_train, Y_train, X_test, Y_test, learning_rate = 0.009, num_epochs = 
             if print_cost == True and epoch % 1 == 0:
                 costs.append(minibatch_cost)
             if epoch % 50 == 0:
-                save_path = saver.save(sess, "C:\\Users\\itmfr\\Desktop\\COV\\convolution.ckpt")
+                save_path = saver.save(sess, "/home/santiagovf/Documents/Git/convolution.ckpt")
                 print("Model saved in path: %s" % save_path)
                 print("iteración: %s" % str(epoch))
         
